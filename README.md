@@ -1,1 +1,1 @@
-VideoWayNewProject
+VideoWay
