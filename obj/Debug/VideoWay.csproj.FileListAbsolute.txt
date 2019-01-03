@@ -22,3 +22,17 @@ C:\Users\Cliente\Documents\gitkraken repo locations\VideoWay\obj\Debug\VideoWay.
 C:\Users\Cliente\Documents\gitkraken repo locations\VideoWay\obj\Debug\VideoWay.csproj.CoreCompileInputs.cache
 C:\Users\Cliente\Documents\gitkraken repo locations\VideoWay\obj\Debug\VideoWay.exe
 C:\Users\Cliente\Documents\gitkraken repo locations\VideoWay\obj\Debug\VideoWay.pdb
+C:\Users\luisb\source\repos\VideoWayProject\VideoWay\bin\Debug\VideoWay.exe.config
+C:\Users\luisb\source\repos\VideoWayProject\VideoWay\bin\Debug\VideoWay.exe
+C:\Users\luisb\source\repos\VideoWayProject\VideoWay\bin\Debug\VideoWay.pdb
+C:\Users\luisb\source\repos\VideoWayProject\VideoWay\obj\Debug\VideoWay.csprojAssemblyReference.cache
+C:\Users\luisb\source\repos\VideoWayProject\VideoWay\obj\Debug\VideoWay.CreateAccountForm.resources
+C:\Users\luisb\source\repos\VideoWayProject\VideoWay\obj\Debug\VideoWay.LoginForm.resources
+C:\Users\luisb\source\repos\VideoWayProject\VideoWay\obj\Debug\VideoWay.Properties.Resources.resources
+C:\Users\luisb\source\repos\VideoWayProject\VideoWay\obj\Debug\VideoWay.UploadVideoForm.resources
+C:\Users\luisb\source\repos\VideoWayProject\VideoWay\obj\Debug\VideoWay.UserMainPageForm.resources
+C:\Users\luisb\source\repos\VideoWayProject\VideoWay\obj\Debug\VideoWay.VideoWatchForm.resources
+C:\Users\luisb\source\repos\VideoWayProject\VideoWay\obj\Debug\VideoWay.csproj.GenerateResource.cache
+C:\Users\luisb\source\repos\VideoWayProject\VideoWay\obj\Debug\VideoWay.csproj.CoreCompileInputs.cache
+C:\Users\luisb\source\repos\VideoWayProject\VideoWay\obj\Debug\VideoWay.exe
+C:\Users\luisb\source\repos\VideoWayProject\VideoWay\obj\Debug\VideoWay.pdb

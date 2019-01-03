@@ -78,6 +78,7 @@
             this.loginButton.TabIndex = 3;
             this.loginButton.Text = "Login";
             this.loginButton.UseVisualStyleBackColor = true;
+            this.loginButton.Click += new System.EventHandler(this.loginButton_Click);
             // 
             // createAccountLink
             // 
@@ -88,6 +89,7 @@
             this.createAccountLink.TabIndex = 4;
             this.createAccountLink.TabStop = true;
             this.createAccountLink.Text = "Create New Account";
+            this.createAccountLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.createAccountLink_LinkClicked);
             // 
             // usernameLoginTextBox
             // 
@@ -113,9 +115,10 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(421, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(405, 28);
             this.menuStrip1.TabIndex = 7;
             this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // sairToolStripMenuItem
             // 
@@ -128,7 +131,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(421, 379);
+            this.ClientSize = new System.Drawing.Size(405, 379);
             this.Controls.Add(this.passwordLoginTextBox);
             this.Controls.Add(this.usernameLoginTextBox);
             this.Controls.Add(this.createAccountLink);
@@ -141,6 +144,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "LoginForm";
             this.Text = "LoginForm";
+            this.Load += new System.EventHandler(this.LoginForm_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

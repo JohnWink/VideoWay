@@ -114,6 +114,7 @@
             this.createAccountButton.TabIndex = 8;
             this.createAccountButton.Text = "Create";
             this.createAccountButton.UseVisualStyleBackColor = true;
+            this.createAccountButton.Click += new System.EventHandler(this.createAccountButton_Click);
             // 
             // menuStrip1
             // 

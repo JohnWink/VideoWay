@@ -1,0 +1,6 @@
+Naho1;draggy123;Naho@myHouse.pt;user;
+naho;naho123;Naho@MyHouse.pt;user;
+lol;123;lol@myplace.pt;user;
+werk;werk123;field[2] == email;user;
+man;ThisSucks;lol@myplace.pt;user;user;
+Naho;123;email;user;
