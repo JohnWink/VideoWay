@@ -48,6 +48,9 @@
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -102,16 +105,16 @@
             // 
             // webBrowser1
             // 
-            this.webBrowser1.Location = new System.Drawing.Point(3, 3);
+            this.webBrowser1.Location = new System.Drawing.Point(-2, -3);
             this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
             this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(510, 327);
+            this.webBrowser1.Size = new System.Drawing.Size(520, 338);
             this.webBrowser1.TabIndex = 5;
             // 
             // previewVideoPlayButton
             // 
             this.previewVideoPlayButton.Enabled = false;
-            this.previewVideoPlayButton.Location = new System.Drawing.Point(471, 476);
+            this.previewVideoPlayButton.Location = new System.Drawing.Point(460, 525);
             this.previewVideoPlayButton.Name = "previewVideoPlayButton";
             this.previewVideoPlayButton.Size = new System.Drawing.Size(111, 40);
             this.previewVideoPlayButton.TabIndex = 6;
@@ -122,7 +125,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(494, 103);
+            this.label2.Location = new System.Drawing.Point(492, 161);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(57, 17);
             this.label2.TabIndex = 7;
@@ -150,7 +153,7 @@
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.webBrowser1);
-            this.panel1.Location = new System.Drawing.Point(266, 123);
+            this.panel1.Location = new System.Drawing.Point(261, 182);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(520, 337);
             this.panel1.TabIndex = 9;
@@ -174,7 +177,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(311, 54);
+            this.label4.Location = new System.Drawing.Point(284, 54);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(69, 17);
             this.label4.TabIndex = 12;
@@ -183,16 +186,16 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(386, 51);
+            this.comboBox1.Location = new System.Drawing.Point(359, 51);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(185, 24);
+            this.comboBox1.Size = new System.Drawing.Size(248, 24);
             this.comboBox1.TabIndex = 13;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(646, 42);
+            this.button1.Location = new System.Drawing.Point(646, 51);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(135, 46);
+            this.button1.Size = new System.Drawing.Size(135, 76);
             this.button1.TabIndex = 14;
             this.button1.Text = "Upload";
             this.button1.UseVisualStyleBackColor = true;
@@ -231,11 +234,40 @@
             this.label5.TabIndex = 17;
             this.label5.Text = "Titulo do Video";
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(284, 97);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(106, 17);
+            this.label6.TabIndex = 18;
+            this.label6.Text = "Nova Categoria";
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(286, 123);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(210, 22);
+            this.textBox4.TabIndex = 19;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(502, 120);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(105, 25);
+            this.button2.TabIndex = 20;
+            this.button2.Text = "Adicionar";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // UploadVideoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(819, 600);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.statusStrip1);
@@ -289,5 +321,8 @@
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Button button2;
     }
 }

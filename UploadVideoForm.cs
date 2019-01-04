@@ -17,6 +17,8 @@ namespace VideoWay
         {
             InitializeComponent();
         }
+        //some paths of files
+        public string categpath = @"text_folder/categories.txt";
 
         private void previewVideoPlayButton_Click(object sender, EventArgs e)
         {
@@ -127,13 +129,45 @@ namespace VideoWay
         private void UploadVideoForm_Load(object sender, EventArgs e)
         {
             // status will show time and status of the stuff
-            //if pre defined categories we will load the category text file
-            
+            //we will need to load the category file txt and  file the combo box
+            if (File.Exists(categpath))
+            {
+                StreamReader sr;
+                sr = File.OpenText(categpath);
+                string line;
+                while((line=sr.ReadLine()) != null)
+                {
+                    comboBox1.Items.Add(line);
+                }
+                sr.Close();
+            }
+
+            else
+            {
+                StreamWriter sw;
+                sw = File.CreateText(categpath);
+                sw.Close();
+            }
         }
 
         private void sairToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            //when the button clicks it wil fetch te text on the text box, open the streamwriter and write it on the category txt file
+            string category = textBox4.Text;
+
+            // we wont need to check the existence of the files sence that will be done on load
+            StreamWriter sw;
+            sw = File.AppendText(categpath);
+            
+            // after the commands are set, we can now add the category
+
+            sw.WriteLine(category);
+            sw.Close();
         }
     }
 }
