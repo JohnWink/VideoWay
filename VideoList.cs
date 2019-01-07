@@ -10,7 +10,7 @@ namespace VideoWay
     {
         //declaring class atributes of the video list
         public string listname;
-        public int listveiws;
+        public int listviews;
         public string videopath;
         public string commentpath;
         public string category;
@@ -23,10 +23,10 @@ namespace VideoWay
         }
 
         //entrance paramaters for the constructor
-        public VideoList(string listname, int listveiws, string videopath, string commentpath, string category)
+        public VideoList(string listname, int listviews, string videopath, string commentpath, string category)
         {
             this.listname = listname;
-            this.listveiws = listveiws;
+            this.listviews = listviews;
             this.videopath = videopath;
             this.commentpath = commentpath;
             this.category = category;

@@ -61,7 +61,7 @@ namespace VideoWay
                     //adding data do the bases
                     list.listname = textBox2.Text;
                     list.category = comboBox1.Text;
-                    list.listveiws = 0;
+                    list.listviews = 0;
                     list.videopath = @"text_folder/" + list.listname + "-list.txt";
                     list.commentpath = @"text_folder/" + list.listname + "-comments.text";
 
@@ -167,6 +167,9 @@ namespace VideoWay
             // after the commands are set, we can now add the category
 
             sw.WriteLine(category);
+            comboBox1.Items.Add(category);
+            textBox4.Text = "";
+
             sw.Close();
         }
     }

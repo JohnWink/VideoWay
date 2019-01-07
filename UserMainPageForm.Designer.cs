@@ -34,8 +34,9 @@
             this.ViewsColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CategoryColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.criarListaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mostRecentRadioButton = new System.Windows.Forms.RadioButton();
             this.mostPopularRadioButton = new System.Windows.Forms.RadioButton();
             this.applyFilterButton = new System.Windows.Forms.Button();
@@ -43,7 +44,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.criarListaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -97,18 +97,25 @@
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // sairToolStripMenuItem
+            // criarListaToolStripMenuItem
             // 
-            this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            this.sairToolStripMenuItem.Size = new System.Drawing.Size(46, 24);
-            this.sairToolStripMenuItem.Text = "Sair";
-            this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
+            this.criarListaToolStripMenuItem.Name = "criarListaToolStripMenuItem";
+            this.criarListaToolStripMenuItem.Size = new System.Drawing.Size(86, 24);
+            this.criarListaToolStripMenuItem.Text = "Criar Lista";
+            this.criarListaToolStripMenuItem.Click += new System.EventHandler(this.criarListaToolStripMenuItem_Click);
             // 
             // logoutToolStripMenuItem
             // 
             this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
             this.logoutToolStripMenuItem.Size = new System.Drawing.Size(68, 24);
             this.logoutToolStripMenuItem.Text = "Logout";
+            // 
+            // sairToolStripMenuItem
+            // 
+            this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
+            this.sairToolStripMenuItem.Size = new System.Drawing.Size(46, 24);
+            this.sairToolStripMenuItem.Text = "Sair";
+            this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
             // mostRecentRadioButton
             // 
@@ -140,6 +147,7 @@
             this.applyFilterButton.TabIndex = 5;
             this.applyFilterButton.Text = "Apply Filter";
             this.applyFilterButton.UseVisualStyleBackColor = true;
+            this.applyFilterButton.Click += new System.EventHandler(this.applyFilterButton_Click);
             // 
             // listBox1
             // 
@@ -176,12 +184,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(708, 382);
             this.panel1.TabIndex = 9;
-            // 
-            // criarListaToolStripMenuItem
-            // 
-            this.criarListaToolStripMenuItem.Name = "criarListaToolStripMenuItem";
-            this.criarListaToolStripMenuItem.Size = new System.Drawing.Size(86, 24);
-            this.criarListaToolStripMenuItem.Text = "Criar Lista";
             // 
             // UserMainPageForm
             // 
