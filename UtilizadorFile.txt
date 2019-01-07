@@ -4,3 +4,8 @@ lol;123;lol@myplace.pt;user;
 werk;werk123;field[2] == email;user;
 man;ThisSucks;lol@myplace.pt;user;user;
 Naho;123;email;user;
+Itsame;mario;ok?@myhouse.com;user;
+JohnWink;920092;luisbpires@hotmail.com;user;
+Drakayn;1234;lol@miami.com;user;
+drakayn;123;mygod@heaven.com;user;
+1234;1234;lol@Imgud.com;user;

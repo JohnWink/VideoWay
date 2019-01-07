@@ -42,8 +42,8 @@ namespace VideoWay
             {
                 System.Windows.Forms.MessageBox.Show("Entrou com sucesso!!");
 
-                VideoWatchForm videoWatch = new VideoWatchForm();
-                videoWatch.Show();
+                UserMainPageForm mainPage = new UserMainPageForm();
+                mainPage.Show();
 
             }
             else

@@ -51,6 +51,8 @@ namespace VideoWay
                 sw.WriteLine(line);
                 sw.Close();
                 System.Windows.Forms.MessageBox.Show("Conta Criada!");
+                Application.Exit();
+
             }
             else
             {
@@ -63,6 +65,8 @@ namespace VideoWay
                     System.Windows.Forms.MessageBox.Show("Erro: Username ou Email já existem");
                 }
             }
+
+       
 
 
 
