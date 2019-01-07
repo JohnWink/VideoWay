@@ -14,6 +14,7 @@ namespace VideoWay
         public string videopath;
         public string commentpath;
         public string category;
+        public string date;
 
         // constrcutors pathern (empthy space)
 
@@ -23,13 +24,14 @@ namespace VideoWay
         }
 
         //entrance paramaters for the constructor
-        public VideoList(string listname, int listviews, string videopath, string commentpath, string category)
+        public VideoList(string listname, int listviews, string videopath, string commentpath, string category, string date)
         {
             this.listname = listname;
             this.listviews = listviews;
             this.videopath = videopath;
             this.commentpath = commentpath;
             this.category = category;
+            this.date = date;
         }
 
 

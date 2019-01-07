@@ -19,6 +19,7 @@ namespace VideoWay
         }
         //some paths of files
         public string categpath = @"text_folder/categories.txt";
+        public string playlists = @"text_folder/playlists.txt";
 
         private void previewVideoPlayButton_Click(object sender, EventArgs e)
         {
@@ -62,16 +63,37 @@ namespace VideoWay
                     list.listname = textBox2.Text;
                     list.category = comboBox1.Text;
                     list.listviews = 0;
+                    list.date = DateTime.Now.ToString();
                     list.videopath = @"text_folder/" + list.listname + "-list.txt";
-                    list.commentpath = @"text_folder/" + list.listname + "-comments.text";
+                    list.commentpath = @"text_folder/" + list.listname + "-comments.txt";
 
                     // after all those are done, we will open the SW and save our files
                     StreamWriter sw;
+                    //creating the paths by order of construction
                     sw = File.CreateText(list.commentpath);
-                    sw = File.CreateText(list.videopath);
+                    sw.Close();
+
+                    StreamWriter sw2;
+                    //adding to the info the the playlist files (first check if the files existence)
+                    if (File.Exists(playlists))
+                    {
+                        sw2 = File.AppendText(playlists);
+                        sw2.WriteLine(list.listname + ";" + list.category + ";" + list.listviews + ";" + list.date + ";" + list.videopath + ";" + list.commentpath);
+
+                    }
+
+                    else
+                    {
+                        sw2 = File.CreateText(playlists);
+                        sw2.WriteLine(list.listname + ";" + list.category + ";" + list.listviews + ";" + list.date + ";" + list.videopath + ";" + list.commentpath);
+                    }
                     
+                    
+                    sw2.Close();
+
+                    StreamWriter sw3;
                     //after the files are created we need to add the listbox1 links and tittle to the of the videos
-                    
+                    sw3 = File.CreateText(list.videopath);
                     //get the number of items for the for cycle
                     string numb = listBox1.Items.Count.ToString();
                     int counter = Convert.ToInt16(numb);
@@ -79,9 +101,11 @@ namespace VideoWay
                     for (int i = 0; i < counter; i++)
                     {
                         string line = listBox1.Items[i].ToString();
-                        sw.WriteLine(line);//this will be in seperate lines has in ENTER kind
+                        sw3.WriteLine(line);//this will be in seperate lines has in ENTER kind
                     }
-                    sw.Close();
+                    sw3.Close();
+
+                    toolStripStatusLabel1.Text = "Upload da playlist , com sucesso";
 
 
                 }
@@ -105,6 +129,7 @@ namespace VideoWay
                 string title = textBox3.Text;
                 listBox1.Items.Add(title + ";" + link);
                 textBox1.Text = "";
+                textBox3.Text = "";
 
             }
 
