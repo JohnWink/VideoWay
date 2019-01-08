@@ -98,6 +98,9 @@ namespace VideoWay
             return true;
         }
 
-            
+        private void CreateAccountForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
