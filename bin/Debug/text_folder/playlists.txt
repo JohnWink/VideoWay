@@ -1,1 +1,2 @@
 TestList1;Musica;0;07/01/2019 17:23:46;text_folder/TestList1-list.txt;text_folder/TestList1-comments.txt
+listtest2;Concertos;0;08/01/2019 11:08:39;text_folder/listtest2-list.txt;text_folder/listtest2-comments.txt

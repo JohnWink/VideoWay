@@ -63,5 +63,21 @@ namespace VideoWay
             UploadVideoForm uploadform = new UploadVideoForm();
             uploadform.Show();
         }
+
+        private void watchvideofomrToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            VideoWatchForm videoWatch = new VideoWatchForm();
+            videoWatch.Show();
+        }
+
+        private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void sairToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
