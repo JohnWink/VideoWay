@@ -62,12 +62,12 @@ namespace VideoWay
                     //adding data do the bases
                     list.listname = textBox2.Text;
                     list.category = comboBox1.Text;
-<<<<<<< Updated upstream
+//<<<<<<< Updated upstream
                     list.listviews = 0;
                     list.date = DateTime.Now.ToString();
-=======
-                    list.listveiws = 0;// CORRECT THIS----------------------------------------------------------------------------< CHECK THIS QUICKLY
->>>>>>> Stashed changes
+//=======
+                    list.listviews = 0;// CORRECT THIS----------------------------------------------------------------------------< CHECK THIS QUICKLY
+//>>>>>>> Stashed changes
                     list.videopath = @"text_folder/" + list.listname + "-list.txt";
                     list.commentpath = @"text_folder/" + list.listname + "-comments.txt";
 
@@ -200,6 +200,11 @@ namespace VideoWay
             textBox4.Text = "";
 
             sw.Close();
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
         }
     }
 }

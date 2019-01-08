@@ -59,11 +59,11 @@
             this.DateColumn,
             this.ViewsColumn,
             this.CategoryColumn});
-            this.dataGridView1.Location = new System.Drawing.Point(-2, -2);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Location = new System.Drawing.Point(-3, -2);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(531, 310);
+            this.dataGridView1.Size = new System.Drawing.Size(708, 382);
             this.dataGridView1.TabIndex = 1;
             // 
             // TitleColumn
@@ -90,10 +90,10 @@
             // 
             this.mostRecentRadioButton.AutoSize = true;
             this.mostRecentRadioButton.Checked = true;
-            this.mostRecentRadioButton.Location = new System.Drawing.Point(565, 28);
-            this.mostRecentRadioButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.mostRecentRadioButton.Location = new System.Drawing.Point(753, 34);
+            this.mostRecentRadioButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.mostRecentRadioButton.Name = "mostRecentRadioButton";
-            this.mostRecentRadioButton.Size = new System.Drawing.Size(86, 17);
+            this.mostRecentRadioButton.Size = new System.Drawing.Size(108, 21);
             this.mostRecentRadioButton.TabIndex = 3;
             this.mostRecentRadioButton.TabStop = true;
             this.mostRecentRadioButton.Text = "Most Recent";
@@ -102,20 +102,20 @@
             // mostPopularRadioButton
             // 
             this.mostPopularRadioButton.AutoSize = true;
-            this.mostPopularRadioButton.Location = new System.Drawing.Point(565, 50);
-            this.mostPopularRadioButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.mostPopularRadioButton.Location = new System.Drawing.Point(753, 62);
+            this.mostPopularRadioButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.mostPopularRadioButton.Name = "mostPopularRadioButton";
-            this.mostPopularRadioButton.Size = new System.Drawing.Size(87, 17);
+            this.mostPopularRadioButton.Size = new System.Drawing.Size(112, 21);
             this.mostPopularRadioButton.TabIndex = 4;
             this.mostPopularRadioButton.Text = "Most Popular";
             this.mostPopularRadioButton.UseVisualStyleBackColor = true;
             // 
             // applyFilterButton
             // 
-            this.applyFilterButton.Location = new System.Drawing.Point(667, 35);
-            this.applyFilterButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.applyFilterButton.Location = new System.Drawing.Point(889, 43);
+            this.applyFilterButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.applyFilterButton.Name = "applyFilterButton";
-            this.applyFilterButton.Size = new System.Drawing.Size(86, 32);
+            this.applyFilterButton.Size = new System.Drawing.Size(115, 39);
             this.applyFilterButton.TabIndex = 5;
             this.applyFilterButton.Text = "Apply Filter";
             this.applyFilterButton.UseVisualStyleBackColor = true;
@@ -124,29 +124,28 @@
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(9, 76);
-            this.listBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.listBox1.ItemHeight = 16;
+            this.listBox1.Location = new System.Drawing.Point(12, 94);
+            this.listBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(153, 316);
+            this.listBox1.Size = new System.Drawing.Size(203, 388);
             this.listBox1.TabIndex = 6;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(51, 54);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(68, 66);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 13);
+            this.label1.Size = new System.Drawing.Size(76, 17);
             this.label1.TabIndex = 7;
             this.label1.Text = "Categories";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(289, 54);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(385, 66);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(39, 13);
+            this.label2.Size = new System.Drawing.Size(51, 17);
             this.label2.TabIndex = 8;
             this.label2.Text = "Videos";
             // 
@@ -154,55 +153,59 @@
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.dataGridView1);
-            this.panel1.Location = new System.Drawing.Point(221, 80);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Location = new System.Drawing.Point(295, 98);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(532, 311);
+            this.panel1.Size = new System.Drawing.Size(708, 382);
             this.panel1.TabIndex = 9;
             // 
             // menuStrip1
             // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.sairToolStripMenuItem,
             this.criarContaToolStripMenuItem,
             this.logoutToolStripMenuItem,
-            this.sairToolStripMenuItem,
             this.watchFormToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(761, 24);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(1015, 28);
             this.menuStrip1.TabIndex = 10;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // criarContaToolStripMenuItem
             // 
             this.criarContaToolStripMenuItem.Name = "criarContaToolStripMenuItem";
-            this.criarContaToolStripMenuItem.Size = new System.Drawing.Size(93, 20);
+            this.criarContaToolStripMenuItem.Size = new System.Drawing.Size(114, 24);
             this.criarContaToolStripMenuItem.Text = "Create Playlist";
+            this.criarContaToolStripMenuItem.Click += new System.EventHandler(this.criarContaToolStripMenuItem_Click);
             // 
             // logoutToolStripMenuItem
             // 
             this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
-            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
+            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(68, 24);
             this.logoutToolStripMenuItem.Text = "Logout";
+            this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click_1);
             // 
             // sairToolStripMenuItem
             // 
             this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            this.sairToolStripMenuItem.Size = new System.Drawing.Size(38, 20);
+            this.sairToolStripMenuItem.Size = new System.Drawing.Size(46, 24);
             this.sairToolStripMenuItem.Text = "Sair";
             this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click_1);
             // 
             // watchFormToolStripMenuItem
             // 
             this.watchFormToolStripMenuItem.Name = "watchFormToolStripMenuItem";
-            this.watchFormToolStripMenuItem.Size = new System.Drawing.Size(81, 20);
+            this.watchFormToolStripMenuItem.Size = new System.Drawing.Size(96, 24);
             this.watchFormToolStripMenuItem.Text = "WatchForm";
             // 
             // UserMainPageForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(761, 401);
+            this.ClientSize = new System.Drawing.Size(1015, 494);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.listBox1);
@@ -211,7 +214,7 @@
             this.Controls.Add(this.mostRecentRadioButton);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "UserMainPageForm";
             this.Text = "UserMainPageForm";
             this.Load += new System.EventHandler(this.UserMainPageForm_Load);

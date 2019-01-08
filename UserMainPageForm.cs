@@ -11,10 +11,16 @@ using System.IO;
 
 namespace VideoWay
 {
+    
     public partial class UserMainPageForm : Form
     {
-        public UserMainPageForm()
+        string username; // initialized here to be global on the form
+        string password;
+
+        public UserMainPageForm(String name, String psw) // Calling the login info from the LoginUser Form
         {
+            username = name;
+            password = psw;
             InitializeComponent();
         }
 
@@ -77,7 +83,20 @@ namespace VideoWay
 
         private void sairToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
+            Application.Exit();
+        }
 
+        private void criarContaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            UploadVideoForm uploadVideo = new UploadVideoForm();
+            uploadVideo.Show();
+        }
+
+        private void logoutToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+            Parameters.CurrentForm.Show(); // shows previous Form
+                        
         }
     }
 }

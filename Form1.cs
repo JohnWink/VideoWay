@@ -41,8 +41,9 @@ namespace VideoWay
             if(verify(usernameLoginTextBox.Text, passwordLoginTextBox.Text) == true)
             {
                 System.Windows.Forms.MessageBox.Show("Entrou com sucesso!!");
-
-                UserMainPageForm mainPage = new UserMainPageForm();
+                Parameters.CurrentForm = Form.ActiveForm;
+                this.Hide();
+                UserMainPageForm mainPage = new UserMainPageForm(usernameLoginTextBox.Text, passwordLoginTextBox.Text);
                 mainPage.Show();
                 
 
