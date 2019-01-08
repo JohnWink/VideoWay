@@ -44,6 +44,7 @@ namespace VideoWay
 
                 UserMainPageForm mainPage = new UserMainPageForm();
                 mainPage.Show();
+                
 
             }
             else
