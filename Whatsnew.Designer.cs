@@ -131,7 +131,7 @@
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Whatsnew";
-            this.Text = "Whatsnew";
+            this.Text = "Welcome Back!";
             this.Load += new System.EventHandler(this.Whatsnew_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.menuStrip1.ResumeLayout(false);

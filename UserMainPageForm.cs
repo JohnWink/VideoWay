@@ -80,6 +80,8 @@ namespace VideoWay
 
 
 
+
+
         }
 
         private void applyFilterButton_Click(object sender, EventArgs e)
@@ -91,13 +93,146 @@ namespace VideoWay
                 //Popularity filter by the number of veiws, in a descending order from most popular to least popular
                 //grid is not workingatm i will have to check the exerccice and not freak out
                 //note didnt work becuase i forgot to put .txt  on the path duh!
-                   
-                
+
+            //if the item is selected from the listbox
+            if(listBox1.SelectedIndex != -1)
+            {
+                if (mostRecentRadioButton.Checked == true && mostPopularRadioButton.Checked == false)
+                {
+                    StreamReader sr = File.OpenText(playlists);
+                    string line = "";
+                    int lin = 0;
+                    dataGridView1.Rows.Clear();
+                    while ((line = sr.ReadLine()) != null)
+                    {
+                        string[] contents = line.Split(';');
+
+                        int row_counter = dataGridView1.RowCount;
+
+                        //adding an iff condition to see if the array of the content match whit the sellected category
+                        if(contents[1] == listBox1.SelectedItem.ToString())
+                        {
+                            dataGridView1.Rows.Add(1);
+                            row_counter = dataGridView1.RowCount;
+
+                            dataGridView1[0, lin].Value = contents[0].ToString();
+                            dataGridView1[1, lin].Value = contents[1].ToString();
+                            dataGridView1[2, lin].Value = contents[2].ToString();
+                            dataGridView1[3, lin].Value = contents[3].ToString();
 
 
+                            lin++;
 
-            
+                        }
+                        
 
+                    }
+                    //this will sort the datagrid by the column whit the date by descent
+                    dataGridView1.Sort(dataGridView1.Columns[3], ListSortDirection.Descending);
+                }
+
+                //filtering for the most popular videos acording to its views
+                if (mostPopularRadioButton.Checked == true && mostRecentRadioButton.Checked == false)
+                {
+                    StreamReader sr = File.OpenText(playlists);
+                    string line = "";
+                    int lin = 0;
+                    dataGridView1.Rows.Clear();
+                    while ((line = sr.ReadLine()) != null)
+                    {
+                        string[] contents = line.Split(';');
+
+                        int row_counter = dataGridView1.RowCount;
+
+                        //adding an iff condition to see if the array of the content match whit the sellected category
+                        if (contents[1] == listBox1.SelectedItem.ToString())
+                        {
+                            dataGridView1.Rows.Add(1);
+                            row_counter = dataGridView1.RowCount;
+
+                            dataGridView1[0, lin].Value = contents[0].ToString();
+                            dataGridView1[1, lin].Value = contents[1].ToString();
+                            dataGridView1[2, lin].Value = contents[2].ToString();
+                            dataGridView1[3, lin].Value = contents[3].ToString();
+
+
+                            lin++;
+
+                        }
+
+
+                    }
+                    //this will sort the datagrid by the column whit the category by descent
+                    dataGridView1.Sort(dataGridView1.Columns[2], ListSortDirection.Descending);
+
+                }
+            }
+
+            //----------------------------------------------------------------------------------------------//----------
+            //if no item is selected , it will load all lists and put it in the data grid
+            else
+            {
+                //for filtering most recent videos
+                if(mostRecentRadioButton.Checked== true && mostPopularRadioButton.Checked == false)
+                {
+                    StreamReader sr = File.OpenText(playlists);
+                    string line = "";
+                    int lin = 0;
+                    dataGridView1.Rows.Clear();
+                    while ((line = sr.ReadLine()) != null)
+                    {
+                        string[] contents = line.Split(';');
+
+                        int row_counter = dataGridView1.RowCount;
+
+                        dataGridView1.Rows.Add(1);
+                        row_counter = dataGridView1.RowCount;
+
+                        dataGridView1[0, lin].Value = contents[0].ToString();
+                        dataGridView1[1, lin].Value = contents[1].ToString();
+                        dataGridView1[2, lin].Value = contents[2].ToString();
+                        dataGridView1[3, lin].Value = contents[3].ToString();
+
+
+                        lin++;
+
+                    }
+                    //this will sort the datagrid by the column whit the date by descent
+                    dataGridView1.Sort(dataGridView1.Columns[3], ListSortDirection.Descending);
+                }
+
+                //filtering for the most popular videos acording to its views
+                if(mostPopularRadioButton.Checked == true && mostRecentRadioButton.Checked == false)
+                {
+                    StreamReader sr = File.OpenText(playlists);
+                    string line = "";
+                    int lin = 0;
+                    dataGridView1.Rows.Clear();
+                    while ((line = sr.ReadLine()) != null)
+                    {
+                        string[] contents = line.Split(';');
+
+                        int row_counter = dataGridView1.RowCount;
+
+                        dataGridView1.Rows.Add(1);
+                        row_counter = dataGridView1.RowCount;
+
+                        dataGridView1[0, lin].Value = contents[0].ToString();
+                        dataGridView1[1, lin].Value = contents[1].ToString();
+                        dataGridView1[2, lin].Value = contents[2].ToString();
+                        dataGridView1[3, lin].Value = contents[3].ToString();
+
+
+                        lin++;
+
+                    }
+                    //this will sort the datagrid by the column whit the views by descent
+                    dataGridView1.Sort(dataGridView1.Columns[2], ListSortDirection.Descending);
+
+                }
+
+            }
+              
         }
 
         private void criarListaToolStripMenuItem_Click(object sender, EventArgs e)
