@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Biggerview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Biggerview.Designer.cs">
+      <DependentUpon>Biggerview.cs</DependentUpon>
+    </Compile>
     <Compile Include="CreateAccountForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +86,9 @@
     <Compile Include="VideoWatchForm.Designer.cs">
       <DependentUpon>VideoWatchForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Biggerview.resx">
+      <DependentUpon>Biggerview.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CreateAccountForm.resx">
       <DependentUpon>CreateAccountForm.cs</DependentUpon>
     </EmbeddedResource>

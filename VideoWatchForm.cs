@@ -67,5 +67,10 @@ namespace VideoWay
         {
             button1.Enabled = true;
         }
+
+        private void sairToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

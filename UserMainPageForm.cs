@@ -26,6 +26,7 @@ namespace VideoWay
 
         //some paths of files
         public string categpath = @"text_folder/categories.txt";
+        public string playlists = @"text_folder/playlists";
 
         private void sairToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -57,10 +58,38 @@ namespace VideoWay
                 sw = File.CreateText(categpath);
                 sw.Close();
             }
+
+            //load the most recent videolists on the datagrid
         }
 
         private void applyFilterButton_Click(object sender, EventArgs e)
         {
+            //ADD an if condition , if item is selected then it will fillter acording to that category
+
+            //if item is not selected fromt he list box it will do a filter whit all the video lists filter 
+            if(listBox1.SelectedIndex == -1)
+            {
+                if(mostPopularRadioButton.Enabled)
+                {
+                    if (File.Exists(playlists))
+                    {
+                        StreamReader sr;
+                        sr = File.OpenText(playlists);
+                        string line;
+                        while ((line = sr.ReadLine()) != null)
+                        {
+                            dataGridView1.Row.Add(1);
+                        }
+                    }
+                }
+
+                if (mostRecentRadioButton.Enabled)
+                {
+
+                }
+
+
+            }
 
         }
 

@@ -30,7 +30,6 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -55,8 +54,7 @@
             // 
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.sairToolStripMenuItem,
-            this.logoutToolStripMenuItem});
+            this.sairToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(902, 28);
@@ -66,14 +64,9 @@
             // sairToolStripMenuItem
             // 
             this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            this.sairToolStripMenuItem.Size = new System.Drawing.Size(46, 24);
-            this.sairToolStripMenuItem.Text = "Sair";
-            // 
-            // logoutToolStripMenuItem
-            // 
-            this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
-            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(68, 24);
-            this.logoutToolStripMenuItem.Text = "Logout";
+            this.sairToolStripMenuItem.Size = new System.Drawing.Size(57, 24);
+            this.sairToolStripMenuItem.Text = "Close";
+            this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
             // listBox1
             // 
@@ -144,9 +137,9 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(395, 537);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(98, 17);
+            this.label5.Size = new System.Drawing.Size(74, 17);
             this.label5.TabIndex = 8;
-            this.label5.Text = "Commentarios";
+            this.label5.Text = "Comments";
             // 
             // label6
             // 
@@ -164,7 +157,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(147, 59);
             this.button1.TabIndex = 10;
-            this.button1.Text = "Visualizar";
+            this.button1.Text = "Watch";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -201,7 +194,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(147, 44);
             this.button2.TabIndex = 14;
-            this.button2.Text = "Commentar";
+            this.button2.Text = "Comment";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -212,7 +205,7 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(148, 44);
             this.button3.TabIndex = 15;
-            this.button3.Text = "Responder";
+            this.button3.Text = "Reply";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -260,7 +253,6 @@
 
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem logoutToolStripMenuItem;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;

@@ -24,8 +24,12 @@ namespace VideoWay
         private void previewVideoPlayButton_Click(object sender, EventArgs e)
         {
             //when pressed it will start the webbrowser if the item is sellected from the item box
-            //if not then add a message box
-            webBrowser1.Navigate(listBox1.SelectedItem.ToString());
+            
+            string item = listBox1.SelectedItem.ToString();
+            int comp = item.Length;
+            int position = item.IndexOf(";");
+            string link = item.Substring(position+1,comp-position-1);
+            webBrowser1.Navigate(link);
         }
 
         private void button1_Click(object sender, EventArgs e)

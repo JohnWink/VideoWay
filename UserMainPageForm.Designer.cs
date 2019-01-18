@@ -29,10 +29,6 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.TitleColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DateColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ViewsColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CategoryColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mostRecentRadioButton = new System.Windows.Forms.RadioButton();
             this.mostPopularRadioButton = new System.Windows.Forms.RadioButton();
             this.applyFilterButton = new System.Windows.Forms.Button();
@@ -41,10 +37,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.criarContaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.watchFormToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.TitleColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DateColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ViewsColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CategoryColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -65,26 +64,6 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(708, 382);
             this.dataGridView1.TabIndex = 1;
-            // 
-            // TitleColumn
-            // 
-            this.TitleColumn.HeaderText = "Title";
-            this.TitleColumn.Name = "TitleColumn";
-            // 
-            // DateColumn
-            // 
-            this.DateColumn.HeaderText = "Date";
-            this.DateColumn.Name = "DateColumn";
-            // 
-            // ViewsColumn
-            // 
-            this.ViewsColumn.HeaderText = "Views";
-            this.ViewsColumn.Name = "ViewsColumn";
-            // 
-            // CategoryColumn
-            // 
-            this.CategoryColumn.HeaderText = "Category";
-            this.CategoryColumn.Name = "CategoryColumn";
             // 
             // mostRecentRadioButton
             // 
@@ -165,14 +144,20 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.sairToolStripMenuItem,
             this.criarContaToolStripMenuItem,
-            this.logoutToolStripMenuItem,
-            this.watchFormToolStripMenuItem});
+            this.logoutToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
             this.menuStrip1.Size = new System.Drawing.Size(1015, 28);
             this.menuStrip1.TabIndex = 10;
             this.menuStrip1.Text = "menuStrip1";
+            // 
+            // sairToolStripMenuItem
+            // 
+            this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
+            this.sairToolStripMenuItem.Size = new System.Drawing.Size(45, 24);
+            this.sairToolStripMenuItem.Text = "Exit";
+            this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click_1);
             // 
             // criarContaToolStripMenuItem
             // 
@@ -188,18 +173,29 @@
             this.logoutToolStripMenuItem.Text = "Logout";
             this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click_1);
             // 
-            // sairToolStripMenuItem
+            // TitleColumn
             // 
-            this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            this.sairToolStripMenuItem.Size = new System.Drawing.Size(46, 24);
-            this.sairToolStripMenuItem.Text = "Sair";
-            this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click_1);
+            this.TitleColumn.HeaderText = "Title";
+            this.TitleColumn.Name = "TitleColumn";
+            this.TitleColumn.ReadOnly = true;
             // 
-            // watchFormToolStripMenuItem
+            // DateColumn
             // 
-            this.watchFormToolStripMenuItem.Name = "watchFormToolStripMenuItem";
-            this.watchFormToolStripMenuItem.Size = new System.Drawing.Size(96, 24);
-            this.watchFormToolStripMenuItem.Text = "WatchForm";
+            this.DateColumn.HeaderText = "Date";
+            this.DateColumn.Name = "DateColumn";
+            this.DateColumn.ReadOnly = true;
+            // 
+            // ViewsColumn
+            // 
+            this.ViewsColumn.HeaderText = "Views";
+            this.ViewsColumn.Name = "ViewsColumn";
+            this.ViewsColumn.ReadOnly = true;
+            // 
+            // CategoryColumn
+            // 
+            this.CategoryColumn.HeaderText = "Category";
+            this.CategoryColumn.Name = "CategoryColumn";
+            this.CategoryColumn.ReadOnly = true;
             // 
             // UserMainPageForm
             // 
@@ -229,10 +225,6 @@
 
         #endregion
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TitleColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DateColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ViewsColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CategoryColumn;
         private System.Windows.Forms.RadioButton mostRecentRadioButton;
         private System.Windows.Forms.RadioButton mostPopularRadioButton;
         private System.Windows.Forms.Button applyFilterButton;
@@ -244,6 +236,9 @@
         private System.Windows.Forms.ToolStripMenuItem criarContaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem logoutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem watchFormToolStripMenuItem;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TitleColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DateColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ViewsColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CategoryColumn;
     }
 }
