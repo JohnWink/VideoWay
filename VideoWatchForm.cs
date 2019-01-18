@@ -12,8 +12,14 @@ namespace VideoWay
 {
     public partial class VideoWatchForm : Form
     {
-        public VideoWatchForm()
+        //bringing users and video links
+        public string username;
+        public string videoti;
+
+        public VideoWatchForm(String name, String title)
         {
+            username = name;
+            videoti = title;
             InitializeComponent();
         }
 
@@ -21,7 +27,7 @@ namespace VideoWay
         {
             //string from the comment box  and then add to the listbox 2 has an item
             // it will need to put the users name + " " +date  + ": "+ ritchtextbox1.text;
-            string comment = richTextBox1.Text;
+            string comment = username +" "+ DateTime.Now.ToString() + ": "+ richTextBox1.Text;
             listBox2.Items.Add(comment);
             //clear comment box
             richTextBox1.Text = "";
@@ -32,7 +38,9 @@ namespace VideoWay
             //first it will seach the position of the selected item
             int pos = listBox2.SelectedIndex;
             // we make a string of the comment we intend to reply
-            string commentre = listBox2.SelectedItem.ToString();
+            string commentext = listBox2.SelectedItem.ToString();
+            string date = DateTime.Now.ToString();
+            string commentre = username + " " + date + ": " + commentext;
             //after we will search if theres space chars on the sellected item, if so we will add those spacces, if not there no spacess added
             string space = "";
             int count = 0;
@@ -71,6 +79,14 @@ namespace VideoWay
         private void sairToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void VideoWatchForm_Load(object sender, EventArgs e)
+        {
+            // testing variable transfer from other forms
+            label4.Text = videoti;
+            label3.Text = username;
+            // whit the tittle we can search for the video path and open the coment file and video list file 
         }
     }
 }

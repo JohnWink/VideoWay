@@ -13,8 +13,12 @@ namespace VideoWay
 {
     public partial class Whatsnew : Form
     {
-        public Whatsnew()
+        //bringing the user
+        string username;
+
+        public Whatsnew(String name)
         {
+            username = name;
             InitializeComponent();
         }
 
@@ -24,7 +28,7 @@ namespace VideoWay
         private void Whatsnew_Load(object sender, EventArgs e)
         {
             // we will add check the file and check the latest videos filter
-
+            
             
             StreamReader sr = File.OpenText(playlists);
             string line = "";
@@ -71,6 +75,13 @@ namespace VideoWay
             if (dataGridView1.CurrentRow.Selected)
             {
                 //take the tittle cell and brng it to the form so it can load on the wathcform
+                int row = dataGridView1.CurrentRow.Index;
+                string title = dataGridView1[0, row].Value.ToString();
+                Parameters.CurrentForm = Form.ActiveForm;
+                this.Hide();
+                VideoWatchForm watchform = new VideoWatchForm(username,title);
+                watchform.Show();
+                
 
             }
 

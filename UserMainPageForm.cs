@@ -17,6 +17,7 @@ namespace VideoWay
         string username; // initialized here to be global on the form
         string password;
         string status;
+        string videoti;
         
 
         public UserMainPageForm(String name, String psw, String stat) // Calling the login info from the LoginUser Form
@@ -74,7 +75,7 @@ namespace VideoWay
 
             // load a new small form , our alert news
             //Note it will show behind the Mainform for some reason
-            Whatsnew popup = new Whatsnew();
+            Whatsnew popup = new Whatsnew(username);
             popup.Show();
 
 
@@ -107,8 +108,7 @@ namespace VideoWay
 
         private void watchvideofomrToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            VideoWatchForm videoWatch = new VideoWatchForm();
-            videoWatch.Show();
+           
         }
 
         private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
