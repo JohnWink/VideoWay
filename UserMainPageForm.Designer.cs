@@ -40,10 +40,12 @@
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.criarContaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.TitleColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DateColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ViewsColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CategoryColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ViewsColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DateColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -55,9 +57,9 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.TitleColumn,
-            this.DateColumn,
+            this.CategoryColumn,
             this.ViewsColumn,
-            this.CategoryColumn});
+            this.DateColumn});
             this.dataGridView1.Location = new System.Drawing.Point(-3, -2);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
@@ -164,6 +166,7 @@
             this.criarContaToolStripMenuItem.Name = "criarContaToolStripMenuItem";
             this.criarContaToolStripMenuItem.Size = new System.Drawing.Size(114, 24);
             this.criarContaToolStripMenuItem.Text = "Create Playlist";
+            this.criarContaToolStripMenuItem.Visible = false;
             this.criarContaToolStripMenuItem.Click += new System.EventHandler(this.criarContaToolStripMenuItem_Click);
             // 
             // logoutToolStripMenuItem
@@ -173,23 +176,30 @@
             this.logoutToolStripMenuItem.Text = "Logout";
             this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click_1);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(221, 213);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(67, 62);
+            this.button1.TabIndex = 11;
+            this.button1.Text = "Clear Select";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(222, 308);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(67, 62);
+            this.button2.TabIndex = 12;
+            this.button2.Text = "Check PlayList";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
             // TitleColumn
             // 
             this.TitleColumn.HeaderText = "Title";
             this.TitleColumn.Name = "TitleColumn";
             this.TitleColumn.ReadOnly = true;
-            // 
-            // DateColumn
-            // 
-            this.DateColumn.HeaderText = "Date";
-            this.DateColumn.Name = "DateColumn";
-            this.DateColumn.ReadOnly = true;
-            // 
-            // ViewsColumn
-            // 
-            this.ViewsColumn.HeaderText = "Views";
-            this.ViewsColumn.Name = "ViewsColumn";
-            this.ViewsColumn.ReadOnly = true;
             // 
             // CategoryColumn
             // 
@@ -197,11 +207,25 @@
             this.CategoryColumn.Name = "CategoryColumn";
             this.CategoryColumn.ReadOnly = true;
             // 
+            // ViewsColumn
+            // 
+            this.ViewsColumn.HeaderText = "Views";
+            this.ViewsColumn.Name = "ViewsColumn";
+            this.ViewsColumn.ReadOnly = true;
+            // 
+            // DateColumn
+            // 
+            this.DateColumn.HeaderText = "Date";
+            this.DateColumn.Name = "DateColumn";
+            this.DateColumn.ReadOnly = true;
+            // 
             // UserMainPageForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1015, 494);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.listBox1);
@@ -236,9 +260,11 @@
         private System.Windows.Forms.ToolStripMenuItem criarContaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem logoutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DataGridViewTextBoxColumn TitleColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DateColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ViewsColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn CategoryColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ViewsColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DateColumn;
     }
 }

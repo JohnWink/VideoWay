@@ -53,3 +53,5 @@ C:\Users\Cliente\Documents\gitkraken repo locations\Final repo projec videoway\V
 C:\Users\Cliente\Documents\gitkraken repo locations\Final repo projec videoway\VideoWay\obj\Debug\VideoWay.exe
 C:\Users\Cliente\Documents\gitkraken repo locations\Final repo projec videoway\VideoWay\obj\Debug\VideoWay.pdb
 >>>>>>> master
+C:\Users\Cliente\Documents\gitkraken repo locations\Final repo projec videoway\VideoWay\obj\Debug\VideoWay.Biggerview.resources
+C:\Users\Cliente\Documents\gitkraken repo locations\Final repo projec videoway\VideoWay\obj\Debug\VideoWay.Whatsnew.resources

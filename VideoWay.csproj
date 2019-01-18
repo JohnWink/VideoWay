@@ -86,6 +86,12 @@
     <Compile Include="VideoWatchForm.Designer.cs">
       <DependentUpon>VideoWatchForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Whatsnew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Whatsnew.Designer.cs">
+      <DependentUpon>Whatsnew.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Biggerview.resx">
       <DependentUpon>Biggerview.cs</DependentUpon>
     </EmbeddedResource>
@@ -112,6 +118,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="VideoWatchForm.resx">
       <DependentUpon>VideoWatchForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Whatsnew.resx">
+      <DependentUpon>Whatsnew.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

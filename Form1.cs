@@ -13,6 +13,9 @@ namespace VideoWay
 {
     public partial class LoginForm : Form
     {
+        //status of the user
+        public string status = "";
+
         public LoginForm()
         {
             InitializeComponent();
@@ -43,7 +46,7 @@ namespace VideoWay
                 System.Windows.Forms.MessageBox.Show("Entrou com sucesso!!");
                 Parameters.CurrentForm = Form.ActiveForm;
                 this.Hide();
-                UserMainPageForm mainPage = new UserMainPageForm(usernameLoginTextBox.Text, passwordLoginTextBox.Text);
+                UserMainPageForm mainPage = new UserMainPageForm(usernameLoginTextBox.Text, passwordLoginTextBox.Text, status);
                 mainPage.Show();
                 
 
@@ -72,6 +75,7 @@ namespace VideoWay
 
                     if (field[0] == username && field[1] == password)
                     {
+                        status = field[3];
                         return true;
                     }
 

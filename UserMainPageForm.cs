@@ -16,17 +16,21 @@ namespace VideoWay
     {
         string username; // initialized here to be global on the form
         string password;
+        string status;
+        
 
-        public UserMainPageForm(String name, String psw) // Calling the login info from the LoginUser Form
+        public UserMainPageForm(String name, String psw, String stat) // Calling the login info from the LoginUser Form
         {
             username = name;
             password = psw;
+            status = stat;
             InitializeComponent();
         }
 
         //some paths of files
         public string categpath = @"text_folder/categories.txt";
-        public string playlists = @"text_folder/playlists";
+        public string playlists = @"text_folder/playlists.txt";
+        public string userFile = @"..\\..\\UtilizadorFile.txt";
 
         private void sairToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -37,6 +41,15 @@ namespace VideoWay
         {
             // by default when logged it it will show you the most recent videolist added , the existing category list
             //current question rihgt now is if we add  new category in the upload, will it reload and add the new category to the list? if not then a refresh button is needed
+
+            //on load we will check the users status, if admin then make the createvidolist strip visible
+
+            if(status == "admin")
+            {
+                criarContaToolStripMenuItem.Visible = true;
+            }
+            
+            
 
 
             //checking the category files and adding them to the listbox1
@@ -59,7 +72,13 @@ namespace VideoWay
                 sw.Close();
             }
 
-            //load the most recent videolists on the datagrid
+            // load a new small form , our alert news
+            //Note it will show behind the Mainform for some reason
+            Whatsnew popup = new Whatsnew();
+            popup.Show();
+
+
+
         }
 
         private void applyFilterButton_Click(object sender, EventArgs e)
@@ -67,29 +86,16 @@ namespace VideoWay
             //ADD an if condition , if item is selected then it will fillter acording to that category
 
             //if item is not selected fromt he list box it will do a filter whit all the video lists filter 
-            if(listBox1.SelectedIndex == -1)
-            {
-                if(mostPopularRadioButton.Enabled)
-                {
-                    if (File.Exists(playlists))
-                    {
-                        StreamReader sr;
-                        sr = File.OpenText(playlists);
-                        string line;
-                        while ((line = sr.ReadLine()) != null)
-                        {
-                            dataGridView1.Row.Add(1);
-                        }
-                    }
-                }
-
-                if (mostRecentRadioButton.Enabled)
-                {
-
-                }
+            
+                //Popularity filter by the number of veiws, in a descending order from most popular to least popular
+                //grid is not workingatm i will have to check the exerccice and not freak out
+                //note didnt work becuase i forgot to put .txt  on the path duh!
+                   
+                
 
 
-            }
+
+            
 
         }
 
@@ -126,6 +132,14 @@ namespace VideoWay
             this.Close();
             Parameters.CurrentForm.Show(); // shows previous Form
                         
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //this button will allow you to deselect a category
+            listBox1.SelectedIndex = -1;
+            listBox1.Update();
+            
         }
     }
 }
