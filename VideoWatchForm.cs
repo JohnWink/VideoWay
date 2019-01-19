@@ -44,18 +44,28 @@ namespace VideoWay
             // after the comment it will save this in the file
             
             string commentpath = @"text_folder/" + listtile + "-comments.txt";
-
             StreamWriter sw;
             if (File.Exists(commentpath))
             {
-                sw = File.AppendText(commentpath);
-                sw.WriteLine(comment);
+                //deletes the old one and creates a new one 
+                File.Delete(commentpath);
+
+                sw = File.CreateText(commentpath);
+
+                string num = listBox2.Items.Count.ToString();
+                int num1 = Convert.ToInt16(num);
+
+                for (int i = 0; i < num1; i++)
+                {
+                    string linha = listBox2.Items[i].ToString();
+                    sw.WriteLine(linha);
+                }
+
                 sw.Close();
 
+                //clear comment box
+                richTextBox1.Text = "";
             }
-            
-            //clear comment box
-            richTextBox1.Text = "";
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -64,12 +74,11 @@ namespace VideoWay
             int pos = listBox2.SelectedIndex;
             // we make a string of the comment we intend to reply
             string commentext = listBox2.SelectedItem.ToString();
-            string date = DateTime.Now.ToString();
-            string commentre = username + " " + date + ": " + commentext;
+            
             //after we will search if theres space chars on the sellected item, if so we will add those spacces, if not there no spacess added
             string space = "";
             int count = 0;
-            while (commentre[count] == ' ')
+            while (commentext[count] == ' ')
             {
                 count++;
                 space = space + " ";
@@ -77,7 +86,7 @@ namespace VideoWay
 
             //on the reply it it will add more spaces to make a stair effect
             // needs: space + "       " + user + " " + date + ": " + ritchtextbox1.text;
-            string reply = space + "      " + commentre;
+            string reply = space + "      " + commentext;
             //it will add the new line (reply after the commnet)
             listBox2.Items.Insert(pos + 1, reply);
             
@@ -88,8 +97,20 @@ namespace VideoWay
             StreamWriter sw;
             if (File.Exists(commentpath))
             {
-                sw = File.AppendText(commentpath);
-                sw.WriteLine(reply);
+                //deletes the old one and creates a new one 
+                File.Delete(commentpath);
+
+                sw = File.CreateText(commentpath);
+
+                string num = listBox2.Items.Count.ToString();
+                int num1 = Convert.ToInt16(num);
+
+                for (int i = 0; i < num1; i++)
+                {
+                    string linha = listBox2.Items[i].ToString();
+                    sw.WriteLine(linha);
+                }
+                
                 sw.Close();
 
             }
