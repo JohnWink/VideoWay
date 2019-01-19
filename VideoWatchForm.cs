@@ -135,6 +135,7 @@ namespace VideoWay
             int position = item.IndexOf(";");
             string link = item.Substring(position + 1, comp - position - 1);
             Biggerview formview = new Biggerview(link);
+            formview.Show();
         }
 
         private void listBox1_Click(object sender, EventArgs e)
@@ -156,19 +157,62 @@ namespace VideoWay
 
             // adding 1 view each time you enter a playlist
             int countV = Int32.Parse(views) + 1;
+            textBox1.Text = countV.ToString();
+
+            //scrap from trying to save the views
+            /*
             //now to save it by opening the play list
             string playlists = @"text_folder/playlists.txt";
             if (File.Exists(playlists))
             {
+                //first open the playlist and we will read it and modify each line
+                StreamReader sr = File.OpenText(playlists);
+                StreamWriter sw = File.CreateText(playlists);
+                string line = "";
+                int lin = 0;
+                // we will start reading and turning the lines in to string arrays
+                while ((line = sr.ReadLine()) != null)
+                {
 
-                
+                    //if the tittle whatches whit the first possition of the string, then we will modify 
+                    //the 3rd possition whit the new veiw count
+                    string[] contents = line.Split(';');
 
+                    if (contents[0] == listtile)
+                    {
+                        contents[2] = countV.ToString();
+
+                        int comp = contents.Length;
+                        string newline = "";
+
+                        for(int i =0; i<comp; i++)
+                        {
+                            newline += contents[i] + ";";
+                        }
+
+                        sw.WriteLine(newline);
+
+
+                    }
+                    //if there were no match then we write it whit no modifications
+
+                    else
+                    {
+                        sw.WriteLine(line);
+
+                    }
+                    
+
+                }
+                sw.Close();
+                sr.Close();
             }
 
             else
             {
                 MessageBox.Show("The playlist doesnt seem to exist!");
             }
+            */
             
 
 
@@ -187,10 +231,10 @@ namespace VideoWay
                 //if the file exist it will add to the list box the items
                 StreamReader sr;
                 sr = File.OpenText(videopath);
-                string line;
-                while ((line = sr.ReadLine()) != null)
+                string line1;
+                while ((line1 = sr.ReadLine()) != null)
                 {
-                    listBox1.Items.Add(line);
+                    listBox1.Items.Add(line1);
                 }
                 sr.Close();
             }
@@ -207,10 +251,10 @@ namespace VideoWay
                 //if the file exist it will add to the list box the items
                 StreamReader sr;
                 sr = File.OpenText(commentpath);
-                string line;
-                while ((line = sr.ReadLine()) != null)
+                string line2;
+                while ((line2 = sr.ReadLine()) != null)
                 {
-                    listBox2.Items.Add(line);
+                    listBox2.Items.Add(line2);
                 }
                 sr.Close();
             }

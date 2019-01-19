@@ -78,6 +78,7 @@ namespace VideoWay
                     // after all those are done, we will open the SW and save our files
                     StreamWriter sw;
                     //creating the paths by order of construction
+                    
                     sw = File.CreateText(list.commentpath);
                     sw.Close();
 
@@ -93,7 +94,7 @@ namespace VideoWay
                     else
                     {
                         sw2 = File.CreateText(playlists);
-                        sw2.WriteLine(list.listname + ";" + list.category + ";" + list.listviews + ";" + list.date + ";" + list.videopath + ";" + list.commentpath);
+                        sw2.WriteLine(list.listname + ";" + list.category + ";"+list.listviews + ";" + list.date + ";" + list.videopath + ";" + list.commentpath);
                     }
                     
                     
@@ -112,6 +113,7 @@ namespace VideoWay
                         sw3.WriteLine(line);//this will be in seperate lines has in ENTER kind
                     }
                     sw3.Close();
+
 
                     toolStripStatusLabel1.Text = "Upload da playlist , com sucesso";
 
