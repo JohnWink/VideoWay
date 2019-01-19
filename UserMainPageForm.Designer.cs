@@ -60,7 +60,7 @@
             this.CategoryColumn,
             this.ViewsColumn,
             this.DateColumn});
-            this.dataGridView1.Location = new System.Drawing.Point(-2, -2);
+            this.dataGridView1.Location = new System.Drawing.Point(-2, 0);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
@@ -158,10 +158,10 @@
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.dataGridView1);
-            this.panel1.Location = new System.Drawing.Point(313, 98);
+            this.panel1.Location = new System.Drawing.Point(334, 98);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(690, 382);
+            this.panel1.Size = new System.Drawing.Size(669, 382);
             this.panel1.TabIndex = 9;
             // 
             // menuStrip1
@@ -174,7 +174,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1015, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1047, 28);
             this.menuStrip1.TabIndex = 10;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -204,7 +204,7 @@
             // 
             this.button1.Location = new System.Drawing.Point(231, 221);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(67, 62);
+            this.button1.Size = new System.Drawing.Size(80, 62);
             this.button1.TabIndex = 11;
             this.button1.Text = "Clear Select";
             this.button1.UseVisualStyleBackColor = true;
@@ -214,7 +214,7 @@
             // 
             this.button2.Location = new System.Drawing.Point(231, 303);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(67, 62);
+            this.button2.Size = new System.Drawing.Size(80, 62);
             this.button2.TabIndex = 12;
             this.button2.Text = "Check PlayList";
             this.button2.UseVisualStyleBackColor = true;
@@ -224,7 +224,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1015, 494);
+            this.ClientSize = new System.Drawing.Size(1047, 494);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
