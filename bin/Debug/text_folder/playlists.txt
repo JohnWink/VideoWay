@@ -1,2 +1,3 @@
-TestList1;Musica;3;07/01/2019 17:23:46;text_folder/TestList1-list.txt;text_folder/TestList1-comments.txt
+TestList1;Musica;6;07/01/2019 17:23:46;text_folder/TestList1-list.txt;text_folder/TestList1-comments.txt;;;
 listtest2;Concertos;2;08/01/2019 11:08:39;text_folder/listtest2-list.txt;text_folder/listtest2-comments.txt
+top3 musics ;Musica;1;19/01/2019 14:41:48;text_folder/top3 musics -list.txt;text_folder/top3 musics -comments.txt;

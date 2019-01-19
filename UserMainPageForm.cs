@@ -129,6 +129,7 @@ namespace VideoWay
                     }
                     //this will sort the datagrid by the column whit the date by descent
                     dataGridView1.Sort(dataGridView1.Columns[3], ListSortDirection.Descending);
+                    sr.Close();
                 }
 
                 //filtering for the most popular videos acording to its views
@@ -164,6 +165,7 @@ namespace VideoWay
                     }
                     //this will sort the datagrid by the column whit the category by descent
                     dataGridView1.Sort(dataGridView1.Columns[2], ListSortDirection.Descending);
+                    sr.Close();
 
                 }
             }
@@ -199,6 +201,7 @@ namespace VideoWay
                     }
                     //this will sort the datagrid by the column whit the date by descent
                     dataGridView1.Sort(dataGridView1.Columns[3], ListSortDirection.Descending);
+                    sr.Close();
                 }
 
                 //filtering for the most popular videos acording to its views
@@ -228,6 +231,7 @@ namespace VideoWay
                     }
                     //this will sort the datagrid by the column whit the views by descent
                     dataGridView1.Sort(dataGridView1.Columns[2], ListSortDirection.Descending);
+                    sr.Close();
 
                 }
 

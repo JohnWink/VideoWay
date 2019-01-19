@@ -28,38 +28,38 @@ namespace VideoWay
         private void Whatsnew_Load(object sender, EventArgs e)
         {
             // we will add check the file and check the latest videos filter
-            
-            
-            StreamReader sr = File.OpenText(playlists);
-            string line = "";
-            int lin = 0;
-            while ((line = sr.ReadLine()) != null)
+
+            if (File.Exists(playlists))
             {
-                string[] contents = line.Split(';');
+                StreamReader sr = File.OpenText(playlists);
+                string line = "";
+                int lin = 0;
+                while ((line = sr.ReadLine()) != null)
+                {
+                    string[] contents = line.Split(';');
 
-                int row_counter = dataGridView1.RowCount;
+                    int row_counter = dataGridView1.RowCount;
 
-                dataGridView1.Rows.Add(1);
-                row_counter = dataGridView1.RowCount;
+                    dataGridView1.Rows.Add(1);
+                    row_counter = dataGridView1.RowCount;
 
-                dataGridView1[0, lin].Value = contents[0].ToString();
-                dataGridView1[1, lin].Value = contents[1].ToString();
-                dataGridView1[2, lin].Value = contents[2].ToString();
-                dataGridView1[3, lin].Value = contents[3].ToString();
+                    dataGridView1[0, lin].Value = contents[0].ToString();
+                    dataGridView1[1, lin].Value = contents[1].ToString();
+                    dataGridView1[2, lin].Value = contents[2].ToString();
+                    dataGridView1[3, lin].Value = contents[3].ToString();
 
 
-                lin++;
+                    lin++;
 
+                }
+
+                //will have to check if it does sort correctly
+
+                dataGridView1.Sort(dataGridView1.Columns[3], ListSortDirection.Descending);
+
+                sr.Close();
             }
-
-            //will have to check if it does sort correctly
-
-            dataGridView1.Sort(dataGridView1.Columns[3], ListSortDirection.Descending);
-
-
-
-
-
+            
         }
 
         private void closeToolStripMenuItem_Click(object sender, EventArgs e)

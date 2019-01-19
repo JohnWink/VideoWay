@@ -159,17 +159,15 @@ namespace VideoWay
             int countV = Int32.Parse(views) + 1;
             textBox1.Text = countV.ToString();
 
-            //scrap from trying to save the views
-            /*
             //now to save it by opening the play list
             string playlists = @"text_folder/playlists.txt";
             if (File.Exists(playlists))
             {
                 //first open the playlist and we will read it and modify each line
                 StreamReader sr = File.OpenText(playlists);
-                StreamWriter sw = File.CreateText(playlists);
+                
                 string line = "";
-                int lin = 0;
+                int linecount = 0;
                 // we will start reading and turning the lines in to string arrays
                 while ((line = sr.ReadLine()) != null)
                 {
@@ -180,31 +178,34 @@ namespace VideoWay
 
                     if (contents[0] == listtile)
                     {
+
                         contents[2] = countV.ToString();
 
                         int comp = contents.Length;
                         string newline = "";
-
+                        // now making our new modified line whit the updated view count
                         for(int i =0; i<comp; i++)
                         {
                             newline += contents[i] + ";";
                         }
 
-                        sw.WriteLine(newline);
+                        sr.Close();
+                        string[] arrLine = File.ReadAllLines(playlists);
+                        arrLine[linecount] = newline;
+                        File.WriteAllLines(playlists, arrLine);
+
+                        //once modified and in the text file, we will break out of this loop
+                        break;
+
+
 
 
                     }
                     //if there were no match then we write it whit no modifications
 
-                    else
-                    {
-                        sw.WriteLine(line);
-
-                    }
-                    
-
+                    linecount++;
                 }
-                sw.Close();
+                
                 sr.Close();
             }
 
@@ -212,7 +213,6 @@ namespace VideoWay
             {
                 MessageBox.Show("The playlist doesnt seem to exist!");
             }
-            */
             
 
 

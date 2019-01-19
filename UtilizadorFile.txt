@@ -10,3 +10,4 @@ Drakayn;1234;lol@miami.com;user;
 drakayn;123;mygod@heaven.com;user;
 1234;1234;lol@Imgud.com;user;
 OhMyGod;1234;god@heaven.com;user;
+miguelA;1234;esmadmiguel@gmail.com;admin;
