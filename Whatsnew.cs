@@ -77,9 +77,12 @@ namespace VideoWay
                 //take the tittle cell and brng it to the form so it can load on the wathcform
                 int row = dataGridView1.CurrentRow.Index;
                 string title = dataGridView1[0, row].Value.ToString();
+                string category = dataGridView1[1, row].Value.ToString();
+                string views = dataGridView1[2, row].Value.ToString();
+                string date = dataGridView1[3, row].Value.ToString();
                 Parameters.CurrentForm = Form.ActiveForm;
                 this.Hide();
-                VideoWatchForm watchform = new VideoWatchForm(username,title);
+                VideoWatchForm watchform = new VideoWatchForm(username,title,category,views,date);
                 watchform.Show();
                 
 

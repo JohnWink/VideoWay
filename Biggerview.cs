@@ -12,8 +12,10 @@ namespace VideoWay
 {
     public partial class Biggerview : Form
     {
-        public Biggerview()
+        public string link;
+        public Biggerview(String video)
         {
+            link = video;
             InitializeComponent();
         }
 
@@ -25,6 +27,7 @@ namespace VideoWay
         private void Biggerview_Load(object sender, EventArgs e)
         {
             //add the link from the list from the previous form
+            webBrowser1.Navigate(link);
         }
     }
 }

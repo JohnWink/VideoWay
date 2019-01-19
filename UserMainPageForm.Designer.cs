@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.TitleColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CategoryColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ViewsColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DateColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mostRecentRadioButton = new System.Windows.Forms.RadioButton();
             this.mostPopularRadioButton = new System.Windows.Forms.RadioButton();
             this.applyFilterButton = new System.Windows.Forms.Button();
@@ -42,10 +46,6 @@
             this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.TitleColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CategoryColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ViewsColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DateColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -60,12 +60,36 @@
             this.CategoryColumn,
             this.ViewsColumn,
             this.DateColumn});
-            this.dataGridView1.Location = new System.Drawing.Point(-3, -2);
+            this.dataGridView1.Location = new System.Drawing.Point(-2, -2);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(708, 382);
+            this.dataGridView1.Size = new System.Drawing.Size(707, 382);
             this.dataGridView1.TabIndex = 1;
+            // 
+            // TitleColumn
+            // 
+            this.TitleColumn.HeaderText = "Title";
+            this.TitleColumn.Name = "TitleColumn";
+            this.TitleColumn.ReadOnly = true;
+            // 
+            // CategoryColumn
+            // 
+            this.CategoryColumn.HeaderText = "Category";
+            this.CategoryColumn.Name = "CategoryColumn";
+            this.CategoryColumn.ReadOnly = true;
+            // 
+            // ViewsColumn
+            // 
+            this.ViewsColumn.HeaderText = "Views";
+            this.ViewsColumn.Name = "ViewsColumn";
+            this.ViewsColumn.ReadOnly = true;
+            // 
+            // DateColumn
+            // 
+            this.DateColumn.HeaderText = "Date";
+            this.DateColumn.Name = "DateColumn";
+            this.DateColumn.ReadOnly = true;
             // 
             // mostRecentRadioButton
             // 
@@ -134,10 +158,10 @@
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.dataGridView1);
-            this.panel1.Location = new System.Drawing.Point(295, 98);
+            this.panel1.Location = new System.Drawing.Point(313, 98);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(708, 382);
+            this.panel1.Size = new System.Drawing.Size(690, 382);
             this.panel1.TabIndex = 9;
             // 
             // menuStrip1
@@ -178,7 +202,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(221, 213);
+            this.button1.Location = new System.Drawing.Point(231, 221);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(67, 62);
             this.button1.TabIndex = 11;
@@ -188,36 +212,13 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(222, 308);
+            this.button2.Location = new System.Drawing.Point(231, 303);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(67, 62);
             this.button2.TabIndex = 12;
             this.button2.Text = "Check PlayList";
             this.button2.UseVisualStyleBackColor = true;
-            // 
-            // TitleColumn
-            // 
-            this.TitleColumn.HeaderText = "Title";
-            this.TitleColumn.Name = "TitleColumn";
-            this.TitleColumn.ReadOnly = true;
-            // 
-            // CategoryColumn
-            // 
-            this.CategoryColumn.HeaderText = "Category";
-            this.CategoryColumn.Name = "CategoryColumn";
-            this.CategoryColumn.ReadOnly = true;
-            // 
-            // ViewsColumn
-            // 
-            this.ViewsColumn.HeaderText = "Views";
-            this.ViewsColumn.Name = "ViewsColumn";
-            this.ViewsColumn.ReadOnly = true;
-            // 
-            // DateColumn
-            // 
-            this.DateColumn.HeaderText = "Date";
-            this.DateColumn.Name = "DateColumn";
-            this.DateColumn.ReadOnly = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // UserMainPageForm
             // 
