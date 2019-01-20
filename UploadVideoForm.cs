@@ -46,7 +46,7 @@ namespace VideoWay
 
             //checking if the if all text boxes whit the data we want are filled,
             
-            if(textBox2.Text != "" && comboBox1.Text != "")
+            if(textBox2.Text != "" && textBox2.Text.Contains(';') == false && comboBox1.Text != "" && comboBox1.Text.Contains(';') == false)
             {
                 //after, we check if theres a textfile whit the same tittle, ergo, if a list whit the name tittle exists
 
@@ -94,7 +94,7 @@ namespace VideoWay
                     else
                     {
                         sw2 = File.CreateText(playlists);
-                        sw2.WriteLine(list.listname + ";" + list.category + ";"+list.listviews + ";" + list.date + ";" + list.videopath + ";" + list.commentpath);
+                        sw2.WriteLine(list.listname + ";" + list.category + ";" + list.listviews + ";" + list.date + ";" + list.videopath + ";" + list.commentpath);
                     }
                     
                     
@@ -135,12 +135,21 @@ namespace VideoWay
             //upgrade to do: there can not be any duplicate links
             if(textBox1.Text != "" && textBox3.Text != "")
             {
-                string link = textBox1.Text;
-                string title = textBox3.Text;
-                listBox1.Items.Add(title + ";" + link);
-                textBox1.Text = "";
-                textBox3.Text = "";
+                if (textBox1.Text.Contains(';') == false && textBox3.Text.Contains(';') == false)
+                {
 
+
+
+                    string link = textBox1.Text;
+                    string title = textBox3.Text;
+                    listBox1.Items.Add(title + ";" + link);
+                    textBox1.Text = "";
+                    textBox3.Text = "";
+                }
+                else
+                {
+                    toolStripStatusLabel1.Text = "Não insira o link ou o video e título com ';' ";
+                }
             }
 
             else
@@ -192,20 +201,27 @@ namespace VideoWay
 
         private void button2_Click(object sender, EventArgs e)
         {
-            //when the button clicks it wil fetch te text on the text box, open the streamwriter and write it on the category txt file
-            string category = textBox4.Text;
+            if (textBox4.Text.Contains(';') == false)
+            {
+                //when the button clicks it wil fetch te text on the text box, open the streamwriter and write it on the category txt file
+                string category = textBox4.Text;
 
-            // we wont need to check the existence of the files sence that will be done on load
-            StreamWriter sw;
-            sw = File.AppendText(categpath);
-            
-            // after the commands are set, we can now add the category
+                // we wont need to check the existence of the files sence that will be done on load
+                StreamWriter sw;
+                sw = File.AppendText(categpath);
 
-            sw.WriteLine(category);
-            comboBox1.Items.Add(category);
-            textBox4.Text = "";
+                // after the commands are set, we can now add the category
 
-            sw.Close();
+                sw.WriteLine(category);
+                comboBox1.Items.Add(category);
+                textBox4.Text = "";
+
+                sw.Close();
+            }
+            else
+            {
+                toolStripStatusLabel1.Text = "Please don't add category names that contain ';' ";
+            }
         }
 
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)

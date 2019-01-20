@@ -25,54 +25,66 @@ namespace VideoWay
 
         private void createAccountButton_Click(object sender, EventArgs e)
         {
+            // The "UtilizadorFile" notepad is located in the project folder
             string userFile = @"..\\..\\UtilizadorFile.txt";
 
-            if(passwordCreateTextBox.Text == passwordConfirmTextBox.Text && verify(usernameCreateTextBox.Text, emailCreateTextBox.Text) == true)
+            //  checks if both entered passwords are identical and summons a method to verify if the username and/or email already exists in the registered accounts
+            if (passwordCreateTextBox.Text == passwordConfirmTextBox.Text && verify(usernameCreateTextBox.Text, emailCreateTextBox.Text) == true)
             {
-     
-                Utilizadoress user = new Utilizadoress();
-                user.username = usernameCreateTextBox.Text;
-                user.password = passwordCreateTextBox.Text;
-                user.email = emailCreateTextBox.Text;
-                user.status = "user";
-
-                StreamWriter sw;
-
-                if (File.Exists(userFile))
+                if (passwordCreateTextBox.Text.Contains(';') == false && usernameCreateTextBox.Text.Contains(';') == false && emailCreateTextBox.Text.Contains(';') == false)
                 {
-                    sw = File.AppendText(userFile);
+
+
+                    Utilizadoress user = new Utilizadoress();
+                    user.username = usernameCreateTextBox.Text;
+                    user.password = passwordCreateTextBox.Text;
+                    user.email = emailCreateTextBox.Text;
+                    user.status = "user";
+
+                    StreamWriter sw;
+
+                    if (File.Exists(userFile))
+                    {
+                        sw = File.AppendText(userFile);
+                    }
+                    else
+                    {
+                        sw = File.CreateText(userFile);
+                    }
+
+                    string line = user.username + ";" + user.password + ";" + user.email + ";" + user.status + ";";
+                    sw.WriteLine(line);
+                    sw.Close();
+                    System.Windows.Forms.MessageBox.Show("Account Created");
+                    this.Close();
+
                 }
                 else
                 {
-                    sw = File.CreateText(userFile);
+                    MessageBox.Show("Avoid using ';' in your username or password or email");
+                    
                 }
-
-                string line = user.username + ";" + user.password + ";" + user.email + ";" + user.status + ";";
-                sw.WriteLine(line);
-                sw.Close();
-                System.Windows.Forms.MessageBox.Show("Conta Criada!");
-                Application.Exit();
-
             }
             else
             {
-                if(passwordCreateTextBox.Text != passwordConfirmTextBox.Text)
+                if (passwordCreateTextBox.Text != passwordConfirmTextBox.Text)
                 {
                     System.Windows.Forms.MessageBox.Show("Erro: Passwords não coincidem!");
                 }
-                if(verify(usernameCreateTextBox.Text, emailCreateTextBox.Text) == false)
+                if (verify(usernameCreateTextBox.Text, emailCreateTextBox.Text) == false)
                 {
                     System.Windows.Forms.MessageBox.Show("Erro: Username ou Email já existem");
                 }
             }
-
+                
        
 
 
 
         }
 
-        private bool verify(string name, string email)  //checks if name already exists in the User's text file
+        //checks if name already exists in the User's text file
+        private bool verify(string name, string email)  
         {
             string userFile = @"..\\..\\UtilizadorFile.txt";
             StreamReader sr;
@@ -83,7 +95,8 @@ namespace VideoWay
 
                 String line;
 
-                while((line = sr.ReadLine())  != null)//Goes through every line of the text file until it checks that there are no more lines to read
+                //Goes through every line of the text file until it checks that there are no more lines to read
+                while ((line = sr.ReadLine())  != null)
                 {
                     string[] field = line.Split(';');
                     if(field[0] == name || field[2] == email)

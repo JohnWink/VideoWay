@@ -35,88 +35,111 @@ namespace VideoWay
 
         private void button2_Click(object sender, EventArgs e)
         {
-            //string from the comment box  and then add to the listbox 2 has an item
-            // it will need to put the users name + " " +date  + ": "+ ritchtextbox1.text;
-            string comment = username +" "+ DateTime.Now.ToString() + ": "+ richTextBox1.Text;
-            listBox2.Items.Add(comment);
-            
+            try{
 
-            // after the comment it will save this in the file
-            
-            string commentpath = @"text_folder/" + listtile + "-comments.txt";
-            StreamWriter sw;
-            if (File.Exists(commentpath))
-            {
-                //deletes the old one and creates a new one 
-                File.Delete(commentpath);
-
-                sw = File.CreateText(commentpath);
-
-                string num = listBox2.Items.Count.ToString();
-                int num1 = Convert.ToInt16(num);
-
-                for (int i = 0; i < num1; i++)
+                if (richTextBox1.Text != "")
                 {
-                    string linha = listBox2.Items[i].ToString();
-                    sw.WriteLine(linha);
+                    //string from the comment box  and then add to the listbox 2 has an item
+                    // it will need to put the users name + " " +date  + ": "+ ritchtextbox1.text;
+                    string comment = username + " " + DateTime.Now.ToString() + ": " + richTextBox1.Text;
+                    listBox2.Items.Add(comment);
+
+
+                    // after the comment it will save this in the file
+
+                    string commentpath = @"text_folder/" + listtile + "-comments.txt";
+                    StreamWriter sw;
+                    if (File.Exists(commentpath))
+                    {
+                        //deletes the old one and creates a new one 
+                        File.Delete(commentpath);
+
+                        sw = File.CreateText(commentpath);
+
+                        string num = listBox2.Items.Count.ToString();
+                        int num1 = Convert.ToInt16(num);
+
+                        for (int i = 0; i < num1; i++)
+                        {
+                            string linha = listBox2.Items[i].ToString();
+                            sw.WriteLine(linha);
+                        }
+
+                        sw.Close();
+
+                        //clear comment box
+                        richTextBox1.Text = "";
+                    }
                 }
-
-                sw.Close();
-
-                //clear comment box
-                richTextBox1.Text = "";
+                else
+                {
+                    MessageBox.Show("Please Write what you want to comment before Pressing the 'Comment' button");
+                }
+            }catch(Exception)
+            {
+                MessageBox.Show("An unexpected Error has ocurred, our Developers have been informed to deal with this issue, We apologise for the inconveniance");
+                return;
             }
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            //first it will seach the position of the selected item
-            int pos = listBox2.SelectedIndex;
-            // we make a string of the comment we intend to reply
-            string commentext = listBox2.SelectedItem.ToString();
-            
-            //after we will search if theres space chars on the sellected item, if so we will add those spacces, if not there no spacess added
-            string space = "";
-            int count = 0;
-            while (commentext[count] == ' ')
+            if (richTextBox1.Text != "")
             {
-                count++;
-                space = space + " ";
-            }
+                //first it will seach the position of the selected item
+                int pos = listBox2.SelectedIndex;
+                // we make a string of the comment we intend to reply
+                string commentext = listBox2.SelectedItem.ToString();
 
-            //on the reply it it will add more spaces to make a stair effect
-            // needs: space + "       " + user + " " + date + ": " + ritchtextbox1.text;
-            string reply = space + "      " + commentext;
-            //it will add the new line (reply after the commnet)
-            listBox2.Items.Insert(pos + 1, reply);
-            
-
-            // after the reply it will save all in the file
-
-            string commentpath = @"text_folder/" + listtile + "-comments.txt";
-            StreamWriter sw;
-            if (File.Exists(commentpath))
-            {
-                //deletes the old one and creates a new one 
-                File.Delete(commentpath);
-
-                sw = File.CreateText(commentpath);
-
-                string num = listBox2.Items.Count.ToString();
-                int num1 = Convert.ToInt16(num);
-
-                for (int i = 0; i < num1; i++)
+                //after we will search if theres space chars on the sellected item, if so we will add those spacces, if not there no spacess added
+                string space = "";
+                int count = 0;
+                while (commentext[count] == ' ')
                 {
-                    string linha = listBox2.Items[i].ToString();
-                    sw.WriteLine(linha);
+                    count++;
+                    space = space + " ";
                 }
-                
-                sw.Close();
+
+                //on the reply it it will add more spaces to make a stair effect
+                // needs: space + "       " + user + " " + date + ": " + ritchtextbox1.text;
+                string rcomment = username + " " + DateTime.Now.ToString() + ": " + richTextBox1.Text;
+                string reply = space + "      " + rcomment;
+                //it will add the new line (reply after the commnet)
+                listBox2.Items.Insert(pos + 1, reply);
+
+
+                // after the reply it will save all in the file
+
+                string commentpath = @"text_folder/" + listtile + "-comments.txt";
+                StreamWriter sw;
+                if (File.Exists(commentpath))
+                {
+                    //deletes the old one and creates a new one 
+                    File.Delete(commentpath);
+
+                    sw = File.CreateText(commentpath);
+
+                    string num = listBox2.Items.Count.ToString();
+                    int num1 = Convert.ToInt16(num);
+
+                    for (int i = 0; i < num1; i++)
+                    {
+                        string linha = listBox2.Items[i].ToString();
+                        sw.WriteLine(linha);
+                    }
+
+                    sw.Close();
+
+                }
+
+                //clear comment box
+                richTextBox1.Text = "";
 
             }
-
-            //clear comment box
-            richTextBox1.Text = "";
+            else
+            {
+                MessageBox.Show("Please Write what you want to comment before Pressing the 'Comment' button");
+            }
 
         }
 

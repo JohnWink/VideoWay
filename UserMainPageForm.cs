@@ -283,26 +283,32 @@ namespace VideoWay
 
         private void button2_Click(object sender, EventArgs e)
         {
-            // it will get the sellected row and get the tittle of the playlist so we can transer to the next form
-            if (dataGridView1.CurrentRow.Selected)
+            try
             {
-                //take the tittle cell and brng it to the form so it can load on the wathcform
-                int row = dataGridView1.CurrentRow.Index;
-                string title = dataGridView1[0, row].Value.ToString();
-                string category = dataGridView1[1, row].Value.ToString();
-                string views = dataGridView1[2, row].Value.ToString();
-                string date = dataGridView1[3, row].Value.ToString();
-                VideoWatchForm watchform = new VideoWatchForm(username, title,category,views,date);
-                watchform.Show();
+                // it will get the sellected row and get the tittle of the playlist so we can transer to the next form
+                if (dataGridView1.CurrentRow.Selected)
+                {
+                    //take the tittle cell and brng it to the form so it can load on the wathcform
+                    int row = dataGridView1.CurrentRow.Index;
+                    string title = dataGridView1[0, row].Value.ToString();
+                    string category = dataGridView1[1, row].Value.ToString();
+                    string views = dataGridView1[2, row].Value.ToString();
+                    string date = dataGridView1[3, row].Value.ToString();
+                    VideoWatchForm watchform = new VideoWatchForm(username, title, category, views, date);
+                    watchform.Show();
 
 
-            }
+                }
 
-            else
+                else
+                {
+                    MessageBox.Show("Please select a row! ");
+                }
+            }catch
             {
-                MessageBox.Show("Please select a row! ");
+                MessageBox.Show("Error: Either select a category or the filter the order you want to see the videos in before selecting and checking the desired video");
+                return;
             }
-
         }
     }
 }
