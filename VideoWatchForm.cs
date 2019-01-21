@@ -151,14 +151,25 @@ namespace VideoWay
 
         private void button1_Click(object sender, EventArgs e)
         {
+
             //when pressed and if  the item is sellect from list box 1, then this button becomes enabled, and it will open
-            // a new form whit the link info and open a bigger webpage so the user can see it in a bigger view
-            string item = listBox1.SelectedItem.ToString();
+            // a new form wiht the link info and open a bigger webpage so the user can see it in a bigger view
+            try
+            {
+                string item = listBox1.SelectedItem.ToString();
+           
             int comp = item.Length;
-            int position = item.IndexOf(";");
-            string link = item.Substring(position + 1, comp - position - 1);
-            Biggerview formview = new Biggerview(link);
-            formview.Show();
+                int position = item.IndexOf(";");
+                string link = item.Substring(position + 1, comp - position - 1);
+                Biggerview formview = new Biggerview(link);
+                formview.Show();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Please select the video you want to watch and NOT the box that the video is in");
+                return;
+            }
+
         }
 
         private void listBox1_Click(object sender, EventArgs e)

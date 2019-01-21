@@ -73,10 +73,7 @@ namespace VideoWay
                 sw.Close();
             }
 
-            // load a new small form , our alert news
-            //Note it will show behind the Mainform for some reason
-            Whatsnew popup = new Whatsnew(username);
-            popup.Show();
+            
 
 
 

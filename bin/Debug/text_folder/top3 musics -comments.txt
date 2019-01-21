@@ -1,6 +1,7 @@
 miguelA 20/01/2019 13:56:04: this music is awesome ! i like it!
       miguelA 20/01/2019 13:56:04: this music is awesome ! i like it!
             JohnWink 20/01/2019 16:11:07: 
+                  JohnWink 21/01/2019 11:16:28: Reply test
             System.Windows.Forms.RichTextBox, Text: Fixed this part, now it should put the s...
                   ok THIS TIME it works
                         miguelA 20/01/2019 14:02:59: ok NOW it works whit username and date!
@@ -8,3 +9,5 @@ miguelA 20/01/2019 13:56:04: this music is awesome ! i like it!
                                     JohnWink 20/01/2019 16:14:10: Reply Test
 JohnWink 20/01/2019 16:10:59: 
 JohnWink 20/01/2019 16:14:16: Comment Test
+      JohnWink 21/01/2019 11:15:27: Comment reply test
+            JohnWink 21/01/2019 11:15:32: reply de reply

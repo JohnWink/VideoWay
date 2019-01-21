@@ -62,8 +62,8 @@
             // sairToolStripMenuItem
             // 
             this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            this.sairToolStripMenuItem.Size = new System.Drawing.Size(57, 24);
-            this.sairToolStripMenuItem.Text = "Close";
+            this.sairToolStripMenuItem.Size = new System.Drawing.Size(45, 24);
+            this.sairToolStripMenuItem.Text = "Exit";
             this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
             // listBox1

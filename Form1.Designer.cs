@@ -123,8 +123,8 @@
             // sairToolStripMenuItem
             // 
             this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            this.sairToolStripMenuItem.Size = new System.Drawing.Size(46, 24);
-            this.sairToolStripMenuItem.Text = "Sair";
+            this.sairToolStripMenuItem.Size = new System.Drawing.Size(45, 24);
+            this.sairToolStripMenuItem.Text = "Exit";
             this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
             // LoginForm

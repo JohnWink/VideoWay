@@ -38,22 +38,27 @@ namespace VideoWay
 
         private void loginButton_Click(object sender, EventArgs e)
         {
-
             string userFile = @"..\\..\\UtilizadorFile.txt";
-           
-            if(verify(usernameLoginTextBox.Text, passwordLoginTextBox.Text) == true)
+
+
+            if (verify(usernameLoginTextBox.Text, passwordLoginTextBox.Text) == true)
             {
-                System.Windows.Forms.MessageBox.Show("Entrou com sucesso!!");
+                System.Windows.Forms.MessageBox.Show("Verified. Welcome, " + usernameLoginTextBox.Text + ".");
                 Parameters.CurrentForm = Form.ActiveForm;
                 this.Hide();
                 UserMainPageForm mainPage = new UserMainPageForm(usernameLoginTextBox.Text, passwordLoginTextBox.Text, status);
                 mainPage.Show();
-                
+
+                // load a new small form , our alert news
+                //Note it will show behind the Mainform for some reason
+                Whatsnew popup = new Whatsnew(usernameLoginTextBox.Text);
+                popup.Show();
 
             }
             else
             {
                 System.Windows.Forms.MessageBox.Show("Erro: Username ou Password incorreta");
+                
             }
 
             
