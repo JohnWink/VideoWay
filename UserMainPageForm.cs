@@ -307,5 +307,29 @@ namespace VideoWay
                 return;
             }
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            listBox1.Items.Clear();
+
+            if (File.Exists(categpath))
+            {
+                StreamReader sr;
+                sr = File.OpenText(categpath);
+                string line;
+                while ((line = sr.ReadLine()) != null)
+                {
+                    listBox1.Items.Add(line);
+                }
+                sr.Close();
+            }
+
+            else
+            {
+                StreamWriter sw;
+                sw = File.CreateText(categpath);
+                sw.Close();
+            }
+        }
     }
 }
